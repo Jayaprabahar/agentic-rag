@@ -1,0 +1,55 @@
+server:
+  servlet:
+    context-path: /amazon-return-policy-agent
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: agentic-ai
+  ai:
+    metrics:
+      enabled: 'true'
+    openai:
+      base-url:
+      api-key:  ${OPENAI_KEY}
+      base:
+        url: https://api.groq.com/openai
+      api:
+        key:  ${OPENAI_KEY}
+      chat:
+        options:
+          model: llama-3.1-8b-instant
+          temperature: 0.7
+          embedding:
+            options:
+              model: text-embedding-ada-002
+    vectorstore:
+      chroma:
+        client:
+          host: http://api.trychroma.com
+          port: 443
+          key-token: ${CHROMADB_API_KEY}
+        tenant-name: ${CHROMADB_TENANT_NAME}
+        database-name: ${CHROMADB_DEFAULT_DATABASE}
+        collection-name: amazon_return_policy
+        initialize-schema: true
+
+logging:
+  level:
+    org:
+      springframework: DEBUG
+application:
+  conversationRememberCount: 20
+  similarityTopK: 20
+  forbiddenWords: harm, illegal, violence
+
+openai:
+  base-url: https://api.groq.com/openai
+  api-key:  ${OPENAI_KEY}
