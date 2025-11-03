@@ -1,0 +1,8 @@
+1) requirements.txt
+2) steps.txt
+3) chroma_client_setup_1.py
+4) ingest_documents.py
+5) test_embeddings.py
+6) test_rag_pipeline.py
+7) test_search.py
+8) app.py

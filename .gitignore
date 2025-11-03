@@ -33,3 +33,4 @@ build/
 .vscode/
 /.venv/
 /my_chroma_data/
+/python/chroma_db/
