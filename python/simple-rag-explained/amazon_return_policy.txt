@@ -1,7 +1,7 @@
 Amazon Return Policy
 Easy shopping, simple returns - that's our promise. At Amazon, we're committed to making your shopping experience as seamless and worry-free as possible. We understand that there may be times when a purchase may not meet your expectations or your needs might change. When that happens, we make completing a return simple and convenient.
-Most items can be returned for a refund or replacement/exchange within 30 days of delivery as long as they are in original or unused condition. For eligible items, you can enjoy free returns at many locations near you. For information on an item's return eligibility, please check the product detail page before placing your order. After placing an order, you can find relevant information on an item's return eligibility in your Order History.
-A refund will be provided if Amazon (or the third party seller) has received the item, and determined that you are eligible for a refund. It can take up to 30 days for us to receive and process your return. In certain circumstances refund timeframes may be longer. If we need additional information about your return, we will notify you with instructions to contact Customer Service. For more information, please see our Refunds page.
+Most items can be returned for a refund or replacement/exchange within 31 days of delivery as long as they are in original or unused condition. For eligible items, you can enjoy free returns at many locations near you. For information on an item's return eligibility, please check the product detail page before placing your order. After placing an order, you can find relevant information on an item's return eligibility in your Order History.
+A refund will be provided if Amazon (or the third party seller) has received the item, and determined that you are eligible for a refund. It can take up to 31 days for us to receive and process your return. In certain circumstances refund timeframes may be longer. If we need additional information about your return, we will notify you with instructions to contact Customer Service. For more information, please see our Refunds page.
 Refund Timelines
 Once we issue your refund, it may take additional time for your financial institution to make funds available in your account.
 Refund Timeline	Refund Method
@@ -12,10 +12,10 @@ Up to 10 business days	Debit card
 Checking account
 EBT Card
 Cash (at participating locations)
-Up to 30 days	Pre-paid credit card (depending on the issuer of the card)
+Up to 31 days	Pre-paid credit card (depending on the issuer of the card)
 No refund issued	Promotional certificate
 Return Window
-Most items sold on Amazon.com can be returned within 30 days of delivery - some exceptions include:
+Most items sold on Amazon.com can be returned within 31 days of delivery - some exceptions include:
 
 7 days	
 Digital books accidentally purchased from the Kindle Store that have not been read.
@@ -94,7 +94,7 @@ Navigate to the Returns page, use the 17-digit order number e.g. 123-1234567-123
 
 Kindle books you receive as a gift are eligible for exchange for an Amazon.com Gift Card before acceptance.
 Global Store Returns
-Items shipped from Amazon.com, including Amazon Resale, can be returned within 30 days of delivery, with some exceptions:
+Items shipped from Amazon.com, including Amazon Resale, can be returned within 31 days of delivery, with some exceptions:
 
 For most Amazon Global Store returns, you will be provided with a pre-paid UPS return label which allows you to return the item(s) to any UPS drop-off point located across the US. You can find your most convenient UPS location using the following link: https://www.ups.com/dropoff/?loc=en_US
 Not all Global Store products are eligible for a pre-paid return. In this case, you will need to return the item at your own expense. We recommend you return the item(s) using a trackable method at the carrier of your choice.

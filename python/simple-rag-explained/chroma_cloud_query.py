@@ -14,13 +14,10 @@ collection = chroma_client.get_or_create_collection(name="amazon_return_policy",
                                                     metadata={"description": "Amazon Return Policy Document Collection"})
 print('collection', collection)
 
-with open("amazon_return_policy.txt", "r", encoding="utf-8") as f:
-    amazon_return_policy:list[str] = f.read().splitlines()
-
-collection.add(
-    ids=[str(uuid.uuid4()) for _ in amazon_return_policy],
-    documents=amazon_return_policy,
-    metadatas=[{"line": line} for line in range(len(amazon_return_policy))]
+results = collection.query(
+    query_texts=["show me the premium condition"],
+    n_results=4
 )
+
 print('Data added to collection successfully.')
-print(collection.peek())
+print(results)
