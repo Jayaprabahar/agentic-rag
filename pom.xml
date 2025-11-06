@@ -11,7 +11,7 @@
     <groupId>io.jayaprabahar.ai</groupId>
     <artifactId>agentic-rag</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>agentic-ai</name>
+    <name>agentic-rag</name>
     <description>Agentic AI project for Spring Boot</description>
     <url/>
     <licenses>

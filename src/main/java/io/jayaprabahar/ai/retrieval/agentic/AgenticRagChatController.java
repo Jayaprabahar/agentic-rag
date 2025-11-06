@@ -11,7 +11,7 @@ public class AgenticRagChatController {
 
     private final RoutingRetrievalAgent routingRetrievalAgent;
 
-    @GetMapping("agentic-retreivel-using-routingpattern")
+    @GetMapping("/agentic-retrieval-using-routingpattern")
     String queryWithAgenticRag(@RequestParam(value = "message") String userQuery) {
         return routingRetrievalAgent.identifyRoute(userQuery);
     }

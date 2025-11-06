@@ -17,39 +17,40 @@ spring:
     metrics:
       enabled: 'true'
     openai:
-      base-url:
-      api-key:  ${OPENAI_KEY}
-      base:
-        url: https://api.groq.com/openai
+      base-url: https://api.groq.com/openai # OpenAI compatible endpoint, Here i used Groq AI
+      api-key: ${GROQ_AI_KEY}
       api:
-        key:  ${OPENAI_KEY}
+        key: ${GROQ_AI_KEY}
       chat:
         options:
           model: llama-3.1-8b-instant
-          temperature: 0.7
-          embedding:
-            options:
-              model: text-embedding-ada-002
+#          temperature: 0.7 # Adjust near to 0.
+      embedding:
+        base-url: https://api.openai.com/ # OpenAI endpoint, as Groq currently does not support embeddings
+        api-key: ${OPENAI_KEY}
+        options:
+          model: text-embedding-3-small
+    model:
+      embedding: openai
     vectorstore:
       chroma:
         client:
-          host: http://api.trychroma.com
-          port: 443
+          # Settings for Cloud config of ChromaDB is always without port number as mandatory HTTPS check added in the Chroma library
+          host: https://api.trychroma.com
+#          port: 443
           key-token: ${CHROMADB_API_KEY}
         tenant-name: ${CHROMADB_TENANT_NAME}
         database-name: ${CHROMADB_DEFAULT_DATABASE}
         collection-name: amazon_return_policy
         initialize-schema: true
 
-logging:
-  level:
-    org:
-      springframework: DEBUG
+#logging:
+#  level:
+#    org:
+#      springframework: TRACE
+
 application:
   conversationRememberCount: 20
   similarityTopK: 20
   forbiddenWords: harm, illegal, violence
-
-openai:
-  base-url: https://api.groq.com/openai
-  api-key:  ${OPENAI_KEY}
+  vectorDataFile: ...\IdeaProjects\agentic-rag\python\simple-rag-explained\amazon_return_policy.txt

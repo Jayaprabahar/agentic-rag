@@ -1,10 +1,5 @@
 package io.jayaprabahar.ai.retrieval.rag;
 
-import com.openai.client.OpenAIClient;
-import com.openai.client.okhttp.OpenAIOkHttpClient;
-import com.openai.models.ChatModel;
-import com.openai.models.responses.Response;
-import com.openai.models.responses.ResponseCreateParams;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.SafeGuardAdvisor;
@@ -20,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 public class RagChatController {
@@ -110,7 +104,7 @@ public class RagChatController {
                 .content();
     }
 
-    @GetMapping("query-via-openaiclient")
+   /* @GetMapping("query-via-openaiclient")
     String queryWithOpenAIClient(@RequestParam(value = "message") String userQuery,
                                  @RequestParam(value = "conversationId", defaultValue = "001") String conversationId) {
 
@@ -135,5 +129,5 @@ public class RagChatController {
         Response response = client.responses().create(params);
 
         return response.toString();
-    }
+    }*/
 }

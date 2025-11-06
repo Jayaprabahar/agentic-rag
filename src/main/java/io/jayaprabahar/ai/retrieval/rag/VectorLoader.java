@@ -5,10 +5,13 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.Resource;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.stereotype.Service;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
@@ -23,14 +26,16 @@ public class VectorLoader {
 
     private final VectorStore vectorStore;
 
-    @Value("classpath:/chroma/amazon_return_policy.txt")
-    private Resource resource;
+    @Value("${application.vectorDataFile}")
+    private String vectorDataFile;
 
     @PostConstruct
     void loadVectorDB(){
         String data;
-        try (InputStream inputStream = resource.getInputStream()) {
-            data = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+
+
+        try (FileInputStream fileInputStream = new FileInputStream(vectorDataFile)) {
+            data = new String(fileInputStream.readAllBytes());
             System.out.println(data);
         } catch (IOException e) {
             throw new RuntimeException(e);
